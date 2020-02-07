@@ -1,0 +1,75 @@
+﻿python脚本运行顺序：
+
+首先进入到项目需要的依赖环境
+
+# 实时数据  (预测反吹//)
+
+1.python History_import.py  导入数据(训练）
+
+2.python Clean.py  数据清洗
+
+3.python Clean_compare.py   数据清洗前后对比（前端表格显示）
+
+4.pyhton Split.py [0.1 / 0.2 / 0.3]  切分数据集
+
+5.python Model.py   分类算法模型
+
+6.python Save_model.py  保存模型
+
+7.python Select_model.py 选择模型
+
+8.Test_import.py   导入数据（预测）
+
+9.Test_prediction.py  分类预测
+
+10.App_prediction.py  手机端进行空调反吹预测  
+
+11.Remove_file.py  重置操作（删除缓存文件）
+
+
+# 历史数据  (最佳维修时间间隔 // 库存 // 可靠性预测 //)
+
+1.python clean_data.py [only/double null/2019-12-11] 导入数据,全损零件/部分损坏零件,null/2019-10-23
+
+2.python get_keywords.py  获取关键词,根据文本中出现的频率
+
+3.python add_fault_type.py ['xx' 'xx' 'xx']  添加失效模式列
+
+4.python parameters_analysis.py   总的因素影响图
+
+5.python km.py   零件生存概率曲线图
+
+6.python km_parameter.py [0/1/2/3/4/5/6/7]  各个参数生存概率曲线图
+
+# 7.python model.py 生存模型
+# 8.python cumulative_dynamic_auc_1.py 各因素对模型影响曲线
+# 9.python cumulative_dynamic_auc_2.py  整体模型评估曲线
+# 10.python example.py 预测零件生存分析曲线，输入样例数据可以预测不同情况下的生存概率曲线(columns.py获取数据的columns# #    给前端显示)
+
+7.reliability_analysis.py 可靠性分析，获取weibull2参参数，weibull分布图
+
+8.calculate_time.py  求最优维修时间间隔，最低成本
+
+9.maintenance_time_chart.py  最优维修时间间隔，最低成本图
+
+10.reliability_prediction.py  根据可靠性，预测组件最可能的寿命长度
+
+11.inventory_management.py   给定库存数量,计算库存不足的概率和发生库存不足的平均时间（前端直方图显示）
+
+12.realtime_reliability_prediction.py 组件在时间T仍然存在，计算下一个时间δt时期的可靠性（前端表格显示）
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

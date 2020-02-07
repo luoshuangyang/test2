@@ -1,0 +1,10 @@
+﻿左边输入:
+"EnvTemp", "TempDiff_L", "Cabin_L", "Pack_L", "SPL_L"
+左边输出:
+"Blowback_L"
+
+右边输入:
+"EnvTemp", "TempDiff_R", "FWD_R", "AFT_R", "Pack_R", "SPL_R"
+右边输出:
+"Blowback_R"
+
